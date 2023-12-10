@@ -33,10 +33,25 @@ const counterInitialState = {
   
   export const alertReducer = (state = alertInitialState, action) => {
     switch (action.type) {
-      case 'warning':
+      case 'WARNING_ALERT':
         return { ...state, alert: 'Your form has been submitted successfully' };
-      case 'success':
+      case 'SUCCESS_ALERT':
         return { ...state, alert: 'Incorrect ID or password' };
+      default:
+        return state;
+    }
+  };
+  
+  const initialState = {
+    amount: 0,
+  };
+  
+  export const payloadReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'ADD_AMOUNT':
+        return { ...state, amount: state.amount + action.payload };
+      case 'SUBTRACT_AMOUNT':
+        return { ...state, amount: state.amount - action.payload };
       default:
         return state;
     }

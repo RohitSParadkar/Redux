@@ -1,31 +1,31 @@
 // actions/counterActions.js
-export const increment = () => {
-    return {
-      type: 'INCREMENT',
-    };
-  };
+export const increment = () => ({
+    type: 'INCREMENT',
+  });
   
-  export const decrement = () => {
-    return {
-      type: 'DECREMENT',
-    };
-  };
+  export const decrement = () => ({
+    type: 'DECREMENT',
+  });
   
-  export const toggleVisible = () => {
-    return {
-      type: 'VISIBLE',
-    };
-  };
+  export const toggleVisible = () => ({
+    type: 'VISIBLE',
+  });
   
-  export const warningAlert = () => {
-    return {
-      type: 'warning',
-    };
-  };
+  export const warningAlert = () => ({
+    type: 'WARNING_ALERT',
+  });
   
-  export const successAlert = () => {
-    return {
-      type: 'success',
-    };
-  };
+  export const successAlert = () => ({
+    type: 'SUCCESS_ALERT',
+  });
+  
+  export const addAmount = (amount) => ({
+    type: 'ADD_AMOUNT',
+    payload: amount,
+  });
+  
+  export const subtractAmount = (amount) => ({
+    type: 'SUBTRACT_AMOUNT',
+    payload: amount,
+  });
   
