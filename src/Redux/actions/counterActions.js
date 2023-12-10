@@ -17,3 +17,15 @@ export const increment = () => {
     };
   };
   
+  export const warningAlert = () => {
+    return {
+      type: 'warning',
+    };
+  };
+  
+  export const successAlert = () => {
+    return {
+      type: 'success',
+    };
+  };
+  
